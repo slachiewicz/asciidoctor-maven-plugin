@@ -17,7 +17,10 @@ package org.asciidoctor.maven.site;
 
 import org.apache.maven.doxia.parser.module.AbstractParserModule;
 import org.apache.maven.doxia.parser.module.ParserModule;
-import org.codehaus.plexus.component.annotations.Component;
+
+import javax.enterprise.inject.Typed;
+import javax.inject.Named;
+import javax.inject.Singleton;
 
 /**
  * This class is the entry point for integration with the Maven Site Plugin
@@ -27,7 +30,9 @@ import org.codehaus.plexus.component.annotations.Component;
  *
  * @author jdlee
  */
-@Component(role = ParserModule.class, hint = AsciidoctorDoxiaParser.ROLE_HINT)
+@Named(AsciidoctorDoxiaParser.ROLE_HINT)
+@Typed(ParserModule.class)
+@Singleton
 public class AsciidoctorDoxiaParserModule extends AbstractParserModule {
 
     /**

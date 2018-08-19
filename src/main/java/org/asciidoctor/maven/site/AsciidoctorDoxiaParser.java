@@ -25,12 +25,14 @@ import org.asciidoctor.AttributesBuilder;
 import org.asciidoctor.OptionsBuilder;
 import org.asciidoctor.SafeMode;
 import org.asciidoctor.maven.AsciidoctorHelper;
-import org.codehaus.plexus.component.annotations.Component;
 import org.codehaus.plexus.util.IOUtil;
 import org.codehaus.plexus.util.xml.Xpp3Dom;
 
+import javax.enterprise.inject.Typed;
 import javax.inject.Inject;
+import javax.inject.Named;
 import javax.inject.Provider;
+import javax.inject.Singleton;
 import java.io.File;
 import java.io.IOException;
 import java.io.Reader;
@@ -47,14 +49,16 @@ import java.util.Map;
  * @author jdlee
  * @author mojavelinux
  */
-@Component(role = Parser.class, hint = AsciidoctorDoxiaParser.ROLE_HINT)
+@Named(AsciidoctorDoxiaParser.ROLE_HINT)
+@Typed(Parser.class)
+@Singleton
 public class AsciidoctorDoxiaParser extends XhtmlParser {
 
     @Inject
     protected Provider<MavenProject> mavenProjectProvider;
 
     /**
-     * The role hint for the {@link AsciidoctorDoxiaParser} Plexus component.
+     * The role hint for the {@link AsciidoctorDoxiaParser} component.
      */
     public static final String ROLE_HINT = "asciidoc";
 
