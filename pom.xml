@@ -66,14 +66,14 @@
         <maven.jacoco.plugin.version>0.7.9</maven.jacoco.plugin.version>
         <jruby.version>1.7.26</jruby.version>
         <maven.plugin.plugin.version>3.4</maven.plugin.plugin.version>
-        <maven.project.version>3.0.5</maven.project.version>
+        <maven.project.version>3.5.0</maven.project.version>
         <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
         <maven.filtering.version>3.1.1</maven.filtering.version>
-        <plexus.utils.version>3.0.23</plexus.utils.version>
+        <plexus.utils.version>3.0.24</plexus.utils.version>
         <plexus.component.metadata.version>1.5.5</plexus.component.metadata.version>
         <netty.version>4.0.38.Final</netty.version>
         <commons.io.version>2.5</commons.io.version>
-        <doxia.version>1.7</doxia.version>
+        <doxia.version>1.8</doxia.version>
         <gmaven.version>1.5</gmaven.version>
     </properties>
 
@@ -290,7 +290,7 @@
                         </goals>
                       </pluginExecutionFilter>
                       <action>
-                        <execute />
+                        <execute/>
                       </action>
                     </pluginExecution>
                     <pluginExecution>
@@ -303,7 +303,7 @@
                         </goals>
                       </pluginExecutionFilter>
                       <action>
-                        <execute />
+                        <execute/>
                       </action>
                     </pluginExecution>
                     <pluginExecution>
@@ -317,7 +317,7 @@
                         </goals>
                       </pluginExecutionFilter>
                       <action>
-                        <execute />
+                        <execute/>
                       </action>
                     </pluginExecution>
                   </pluginExecutions>
